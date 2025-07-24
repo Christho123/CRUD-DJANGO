@@ -1,0 +1,16 @@
+{% extends "productos/base.html" %}
+
+{% block title %}Formulario de Libro{% endblock %}
+
+{% block content %}
+<h1>{{ form.instance.pk|yesno:"Editar Libro,Agregar Libro" }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="actions">
+        <button type="submit" class="btn">Guardar</button>
+        <a href="{% url 'lista_libros' %}" class="btn">Cancelar</a>
+    </div>
+</form>
+{% endblock %}
