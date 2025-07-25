@@ -127,21 +127,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-import os
+import sys
 
-if os.environ.get('USE_SQLITE') == 'true':
+if 'pytest' in sys.modules:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': ':memory:',
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.oracle',
-            'NAME': 'localhost:1521/XEPDB1',
-            'USER': 'CRUDDB',
-            'PASSWORD': 'CRUD159',
         }
     }
