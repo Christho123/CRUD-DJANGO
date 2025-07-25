@@ -14,7 +14,7 @@ def agregar_libro(request):
     return render(request, 'productos/form_libro.html', {'form': form})
 
 def editar_libro(request, pk):
-    libro = get_object_or_404(Libro, id_libro=pk)  # 👈 CAMBIO AQUÍ
+    libro = get_object_or_404(Libro, id_libro=pk)
     form = LibroForm(request.POST or None, instance=libro)
     if form.is_valid():
         form.save()
@@ -22,7 +22,7 @@ def editar_libro(request, pk):
     return render(request, 'productos/form_libro.html', {'form': form})
 
 def eliminar_libro(request, pk):
-    libro = get_object_or_404(Libro, id_libro=pk)  # 👈 CAMBIO AQUÍ
+    libro = get_object_or_404(Libro, id_libro=pk)
     if request.method == 'POST':
         libro.delete()
         return redirect('lista_libros')
