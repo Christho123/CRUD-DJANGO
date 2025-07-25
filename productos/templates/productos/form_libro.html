@@ -4,7 +4,90 @@
 
 {% block content %}
 <h1>{{ form.instance.pk|yesno:"Editar Libro,Agregar Libro" }}</h1>
+<style>
+    body {
+        background: linear-gradient(to bottom right, #0f172a, #1e293b);
+        font-family: 'Segoe UI', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
 
+    .form-wrapper {
+        max-width: 900px;
+        margin: 60px auto;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+        text-align: center;
+    }
+
+    h1 {
+        color: #a78bfa;
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    form {
+        background-color: #1e293b;
+        border-radius: 12px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #f1f5f9;
+        margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 12px;
+        background: #334155;
+        color: #e2e8f0;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    input::placeholder {
+        color: #94a3b8;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        background: linear-gradient(to bottom, #3b82f6, #0ea5e9);
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.3s ease;
+        text-decoration: none;
+    }
+
+    .btn:hover {
+        background: linear-gradient(to bottom, #2563eb, #0284c7);
+        transform: scale(1.03);
+    }
+</style>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
