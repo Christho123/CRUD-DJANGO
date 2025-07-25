@@ -26,6 +26,6 @@ jobs:
     - name: Run tests with pytest
       env:
         DJANGO_SETTINGS_MODULE: crud_project.settings
-        USE_SQLITE: "true"  # 👈 si lo usás en tu settings para alternar
+        USE_SQLITE: "true"
       run: |
         pytest productos/tests/test_views.py -v
