@@ -26,6 +26,7 @@ jobs:
     - name: Run tests with pytest
       env:
         DJANGO_SETTINGS_MODULE: crud_project.settings
+        USE_SQLITE: "true"  # 👈 fuerza usar SQLite
       run: |
         python manage.py migrate
         pytest -v
