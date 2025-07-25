@@ -4,7 +4,8 @@
 
 Este proyecto tiene como finalidad crear una aplicación web con un **CRUD** (Crear, Leer, Actualizar y Eliminar) para gestionar una lista de libros, almacenando información como el **título**, **autor**, **género** y **fecha de publicación**.
 
-![Gestión de Libros](https://th.bing.com/th/id/R.7f3efec26e44187eaa8dbb84850eea50?rik=UfxFSQys%2bqNexw&riu=http%3a%2f%2f3.bp.blogspot.com%2f-LGiCpXy1NR8%2fVZ8OeHWu07I%2fAAAAAAAABwU%2fcoXh_1OFPbM%2fs1600%2fbooks-wallpapers-hd-free-download.jpg&ehk=HRbJ24SuXkL9NGQnZp%2f0c96Aj%2blfZhftxGccTf34AnI%3d&risl=&pid=ImgRaw&r=0)
+![Gestión de Libros] ![Uploading Captura de pantalla 2025-07-24 210621.png…]()
+
 
 ---
 
@@ -24,11 +25,11 @@ Desarrollar una aplicación web funcional que permita al usuario:
 |----------------------------------------------------------------------------------------|:----------:|:----------:|:----------------:|
 | Crear estructura HTML para mostrar la lista de libros y formulario de creación/edición |     X      |            |                  |
 | Estilizar la página con diseño responsive                                              |     X      |            |                  |
-| Implementar lógica con JavaScript para crear y mostrar libros                          |            |     X      |                  |
+| Implementar lógica con Python para crear y mostrar libros                          |            |     X      |                  |
 | Implementar función de actualización y edición de libros                               |            |            |        X         |
 | Implementar función para eliminar libros                                               |            |            |        X         |
 | Manejar validaciones de campos (no vacíos, fechas correctas)                           |            |     X      |                  |
-| Guardar datos en localStorage (opcional)                                               |            |            |        X         |
+| Guardar datos en la base de datos                                               |            |            |        X         |
 | Subir proyecto a GitHub                                                                |            |     X      |                  |
 | Documentar en el README.md                                                             |            |     X      |                  |
 
