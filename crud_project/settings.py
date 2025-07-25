@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['crud-django-rw6r.onrender.com']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
