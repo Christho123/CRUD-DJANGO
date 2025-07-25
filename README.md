@@ -4,7 +4,8 @@
 
 Este proyecto tiene como finalidad crear una aplicación web con un **CRUD** (Crear, Leer, Actualizar y Eliminar) para gestionar una lista de libros, almacenando información como el **título**, **autor**, **género** y **fecha de publicación**.
 
-![Gestión de Libros](c:\Users\DELL\OneDrive\Imagens\Capturas de pantalla\Captura de pantalla 2025-07-24 210621.png)
+![Gestión de Libros] ![Uploading Captura de pantalla 2025-07-24 210621.png…]()
+
 
 ---
 
