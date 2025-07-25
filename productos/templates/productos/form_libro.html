@@ -4,63 +4,43 @@
 
 {% block content %}
 <h1>{{ form.instance.pk|yesno:"Editar Libro,Agregar Libro" }}</h1>
+
 <style>
-    body {
-        background: linear-gradient(to bottom right, #0f172a, #1e293b);
-        font-family: 'Segoe UI', sans-serif;
-        margin: 0;
-        padding: 0;
-        color: white;
-    }
-
-    .form-wrapper {
-        max-width: 900px;
-        margin: 60px auto;
-        background: #ffffff;
-        border-radius: 16px;
-        padding: 40px;
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-        text-align: center;
-    }
-
-    h1 {
-        color: #a78bfa;
-        font-size: 28px;
-        margin-bottom: 30px;
-    }
-
     form {
-        background-color: #1e293b;
-        border-radius: 12px;
-        padding: 30px;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+        background: #f9fafb;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     label {
-        display: block;
-        text-align: left;
         font-weight: bold;
-        text-transform: uppercase;
-        font-size: 13px;
-        color: #f1f5f9;
-        margin-bottom: 6px;
+        margin-bottom: 4px;
+        color: #374151;
+        font-size: 14px;
     }
 
-    input, select, textarea {
+    input[type="text"],
+    input[type="date"] {
         width: 100%;
         padding: 12px;
-        background: #334155;
-        color: #e2e8f0;
-        border: none;
+        border: 1px solid #cbd5e0;
         border-radius: 8px;
         font-size: 15px;
+        background-color: #fff;
+        color: #1e293b;
+        transition: border 0.2s ease;
     }
 
-    input::placeholder {
-        color: #94a3b8;
+    input[type="text"]:focus,
+    input[type="date"]:focus {
+        border-color: #7c3aed;
+        outline: none;
     }
 
     .actions {
@@ -88,9 +68,22 @@
         transform: scale(1.03);
     }
 </style>
+
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    
+    <label for="id_titulo">Título:</label>
+    {{ form.titulo }}
+    
+    <label for="id_autor">Autor:</label>
+    {{ form.autor }}
+    
+    <label for="id_genero">Género:</label>
+    {{ form.genero }}
+    
+    <label for="id_fecha_publicacion">Fecha Publicación:</label>
+    {{ form.fecha_publicacion }}
+
     <div class="actions">
         <button type="submit" class="btn">Guardar</button>
         <a href="{% url 'lista_libros' %}" class="btn">Cancelar</a>

@@ -3,97 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}CRUD Libros{% endblock %}</title>
-<style>
-    body {
-        font-family: 'Segoe UI', sans-serif;
-        background: linear-gradient(to bottom right, #e2e8f0, #cbd5e0);
-        padding: 40px;
-        color: #333;
-    }
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #e2e8f0, #cbd5e0);
+            padding: 40px;
+            color: #333;
+        }
 
-    h1 {
-        text-align: center;
-        color: #5a67d8;
-        font-size: 28px;
-        margin-bottom: 30px;
-    }
+        h1 {
+            text-align: center;
+            color: #7c3aed;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
 
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 16px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-        padding: 30px;
-    }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            padding: 40px;
+        }
 
-    .btn {
-        display: inline-block;
-        padding: 12px 20px;
-        background-color: #38a169;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        margin-bottom: 20px;
-        transition: background-color 0.2s ease;
-    }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 14px;
+            text-decoration: none;
+        }
 
-    .btn:hover {
-        background-color: #2f855a;
-    }
+        .btn-primary {
+            background-color: #3b82f6;
+        }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-        background: white;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
+        .btn-primary:hover {
+            background-color: #2563eb;
+        }
 
-    th {
-        background-color: #3b82f6;
-        color: white;
-        padding: 14px;
-        text-align: left;
-    }
+        .btn-danger {
+            background-color: #ef4444;
+        }
 
-    td {
-        padding: 14px;
-        border-bottom: 1px solid #edf2f7;
-    }
+        .btn-danger:hover {
+            background-color: #dc2626;
+        }
 
-    .action-btn {
-        padding: 6px 12px;
-        border-radius: 6px;
-        font-size: 14px;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        margin-right: 6px;
-    }
+        .btn-warning {
+            background-color: #f59e0b;
+        }
 
-    .edit-btn {
-        background-color: #f59e0b;
-        color: white;
-    }
+        .btn-warning:hover {
+            background-color: #d97706;
+        }
 
-    .edit-btn:hover {
-        background-color: #d97706;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 10px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
 
-    .delete-btn {
-        background-color: #ef4444;
-        color: white;
-    }
+        th {
+            background-color: #3b82f6;
+            color: white;
+            padding: 14px;
+            text-align: left;
+        }
 
-    .delete-btn:hover {
-        background-color: #dc2626;
-    }
-</style>
-
+        td {
+            padding: 14px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+    </style>
 </head>
 <body>
 <div class="container">

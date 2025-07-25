@@ -3,11 +3,11 @@
 {% block title %}Lista de Libros{% endblock %}
 
 {% block content %}
-<h1>Libros Registrados</h1>
+<h1>Gestión de Libros</h1>
 
-<a href="{% url 'agregar_libro' %}" class="btn">Agregar Libro</a>
+<a href="{% url 'agregar_libro' %}" class="btn btn-primary" style="background-color: #10b981; margin-bottom: 20px;">Agregar nuevo libro</a>
 
-<table class="table">
+<table>
     <thead>
         <tr>
             <th>ID</th>
@@ -25,10 +25,10 @@
             <td>{{ libro.titulo }}</td>
             <td>{{ libro.autor }}</td>
             <td>{{ libro.genero }}</td>
-            <td>{{ libro.fecha_publicacion|date:"d/m/Y H:i" }}</td>
+            <td>{{ libro.fecha_publicacion|date:"M. d, Y" }}</td>
             <td>
-                <a href="{% url 'editar_libro' libro.id_libro %}" class="btn">Editar</a>
-                <a href="{% url 'eliminar_libro' libro.id_libro %}" class="btn">Eliminar</a>
+                <a href="{% url 'editar_libro' libro.id_libro %}" class="btn btn-warning">Editar</a>
+                <a href="{% url 'eliminar_libro' libro.id_libro %}" class="btn btn-danger">Eliminar</a>
             </td>
         </tr>
     {% empty %}
@@ -36,5 +36,4 @@
     {% endfor %}
     </tbody>
 </table>
-
 {% endblock %}
