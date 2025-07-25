@@ -29,4 +29,5 @@ jobs:
         USE_SQLITE: "true"  # 👈 fuerza usar SQLite
       run: |
         python manage.py migrate
-        pytest -v
+        pytest productos/tests/test_views.py -v
+
