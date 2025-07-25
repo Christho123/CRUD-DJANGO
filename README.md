@@ -4,7 +4,7 @@
 
 Este proyecto tiene como finalidad crear una aplicación web con un **CRUD** (Crear, Leer, Actualizar y Eliminar) para gestionar una lista de libros, almacenando información como el **título**, **autor**, **género** y **fecha de publicación**.
 
-![Gestión de Libros](img/crud_ima.png)
+![Gestión de Libros](crud_ima.png)
 
 ---
 
